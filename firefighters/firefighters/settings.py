@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'firefighters',
     'accounts',
+    'vehicle',
     'rest_framework',
     'corsheaders'
 ]
