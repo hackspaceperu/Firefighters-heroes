@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'firefighters',
     'accounts',
     'vehicle',
+    'emergency',
     'rest_framework',
     'corsheaders'
 ]
@@ -82,8 +83,15 @@ WSGI_APPLICATION = 'firefighters.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'firefighters',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '0.0.0.0',   # Or an IP Address that your DB is hosted on
+        'PORT': '8000',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        }
     }
 }
 
