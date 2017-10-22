@@ -1,4 +1,4 @@
-from rest_framework.generics import ListAPIView, CreateAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView, ListCreateAPIView
 from rest_framework.generics import RetrieveUpdateDestroyAPIView
 from .models import VehicleType, Vehicle
 from .serializers import VehicleTypeSerializer, VehicleSerializer
@@ -31,6 +31,6 @@ class VehicleDetailView(RetrieveUpdateDestroyAPIView):
     serializer_class = VehicleSerializer
 
 
-class VehicleRegister(CreateAPIView):
+class VehicleRegister(ListCreateAPIView):
     queryset = Vehicle.objects.all()
     serializer_class = VehicleSerializer

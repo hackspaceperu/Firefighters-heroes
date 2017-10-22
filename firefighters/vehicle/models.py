@@ -31,3 +31,16 @@ class Vehicle(models.Model):
 
     class Meta:
         ordering = ('register_date',)
+
+
+class EquipamentOxigen(models.Model):
+    code = models.CharField(max_length=50)
+    title = models.CharField(max_length=100)
+    description = models.TextField(null=True, blank=True)
+    capacity = models.CharField(max_length=20)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES,
+                              default='A')
+    register_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ('register_date',)
