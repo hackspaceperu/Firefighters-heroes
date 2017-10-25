@@ -4,8 +4,9 @@ from vehicle import views
 
 urlpatterns = [
     url(r'^vehicle_type/$', views.VehicleTypeListView.as_view()),
-    url(r'^vehicle_type/(?P<pk>[0-9]+)$', views.VehicleTypeDetailView.as_view()),
-    url(r'^vehicles/$', views.VehicleRegister.as_view(), name='create'),
+    url(r'^vehicle_type/(?P<pk>[0-9]+)$',
+        views.VehicleTypeDetailView.as_view()),
+    url(r'^vehicles/$', views.VehicleListView.as_view(), name='create'),
     url(r'^vehicle/(?P<pk>[0-9]+)$', views.VehicleDetailView.as_view()),
 ]
 

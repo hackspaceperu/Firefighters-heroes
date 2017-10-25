@@ -21,6 +21,7 @@ from accounts import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('vehicle.urls')),
+    url(r'^', include('emergency.urls')),
     url(r'^users/$', views.UserListView.as_view()),
     url(r'^users/(?P<pk>[0-9]+)$', views.UserDetailView.as_view()),
     url(r'^api-token-auth/$', obtain_jwt_token),

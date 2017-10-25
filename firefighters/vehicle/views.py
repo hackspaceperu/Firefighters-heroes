@@ -6,7 +6,7 @@ from .serializers import VehicleTypeSerializer, VehicleSerializer
 # Create your views here.
 
 
-class VehicleTypeListView(ListAPIView):
+class VehicleTypeListView(ListCreateAPIView):
     queryset = VehicleType.objects.all()
     serializer_class = VehicleTypeSerializer
 
@@ -16,21 +16,11 @@ class VehicleTypeDetailView(RetrieveUpdateDestroyAPIView):
     serializer_class = VehicleTypeSerializer
 
 
-class VehicleTypeRegister(CreateAPIView):
-    queryset = VehicleType.objects.all()
-    serializer_class = VehicleTypeSerializer
-
-
-class VehicleListView(ListAPIView):
+class VehicleListView(ListCreateAPIView):
     queryset = Vehicle.objects.all()
     serializer_class = VehicleSerializer
 
 
 class VehicleDetailView(RetrieveUpdateDestroyAPIView):
-    queryset = Vehicle.objects.all()
-    serializer_class = VehicleSerializer
-
-
-class VehicleRegister(ListCreateAPIView):
     queryset = Vehicle.objects.all()
     serializer_class = VehicleSerializer
