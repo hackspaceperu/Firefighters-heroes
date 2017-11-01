@@ -2,6 +2,7 @@ from django.db import models
 from vehicle.models import Vehicle
 from accounts.models import User
 
+
 # Create your models here.
 STATUS_CHOICES = (('A', 'ACTIVE'),
                   ('D', 'DEACTIVE'),
