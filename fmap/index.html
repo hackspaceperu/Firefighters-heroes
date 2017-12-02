@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FinalMap</title>
+  <link href="node_modules/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <input id="pac-input" class="controls" type="text" placeholder="Ingrese dirección">
+  <div id="map"></div>
+  <div class="fixed-action-btn" style="transform: translateY(-140px);">
+      <a id="delete" href="#" class="btn-floating btn-large black"><i class="mdi mdi-36px mdi-delete"></i></a>
+  </div>
+  <div class="fixed-action-btn click-to-toggle horizontal" style="transform: translateY(-70px);">
+      <a id="area" href="#" class="btn-floating btn-large gray"><i class="mdi mdi-36px mdi-crop"></i></a>
+    <ul>
+      <li><a id="emergency" href="#" class="pbtn btn-floating black"><i class="mdi mdi-24px mdi-checkbox-blank"></i></a></li>
+      <li><a id="section" href="#" class="pbtn btn-floating red"><i class="mdi mdi-24px mdi-checkbox-blank-outline"></i></a></li>
+      <li><a id="section-toxic" href="#" class="pbtn btn-floating grey"><i class="mdi mdi-24px mdi-cloud"></i></a></li>
+    </ul>
+  </div>
+  <div class="fixed-action-btn click-to-toggle horizontal">
+    <a id="hand" class="mbtn btn-floating btn-large orange"><i class="mdi mdi-36px mdi-plus-box"></i></a>
+    <ul>
+      <li><a id="truck-delivery" href="#" class="mbtn btn-floating red"><i class="mdi mdi-24px mdi-truck-delivery"></i></a></li>
+      <li><a id="ambulance" href="#" class="mbtn btn-floating purple"><i class="mdi mdi-24px mdi-ambulance"></i></a></li>
+      <li><a id="ray-start-end" href="#" class="lbtn btn-floating black"><i class="mdi mdi-24px mdi-ray-start-end"></i></a></li>
+      <li><a id="checkbox-blank-circle" href="#" class="mbtn btn-floating brown"><i class="mdi mdi-24px mdi-checkbox-blank-circle"></i></a></li>
+      <li><a id="checkbox-blank-circle-outline" href="#" class="mbtn btn-floating brown"><i class="mdi mdi-24px mdi-checkbox-blank-circle-outline"></i></a></li>
+      <li><a id="stairs" href="#" class="mbtn btn-floating grey"><i class="mdi mdi-24px mdi-stairs"></i></a></li>
+      <li><a id="battery" href="#" class="mbtn btn-floating cyan"><i class="mdi mdi-24px mdi-battery"></i></a></li>
+    </ul>
+  </div>
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9DC5e9W2qkPlnN65vCcRaw2uRyoG9rQ4&libraries=drawing,places&callback=initMap"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
